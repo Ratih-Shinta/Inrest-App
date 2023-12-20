@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:inrest_app/app/pages/login_page/controllers/login_page_controller.dart';
 import 'package:inrest_app/app/pages/login_page/views/widgets/or_login_page_widget.dart';
 import 'package:inrest_app/app/pages/login_page/views/widgets/text_field_login_page_widgets.dart';
+import 'package:inrest_app/app/routes/app_pages.dart';
 import 'package:inrest_app/themes/color_themes.dart';
 import 'package:inrest_app/themes/default_themes.dart';
 import 'package:inrest_app/themes/image_themes.dart';
@@ -64,16 +65,19 @@ class LoginPageView extends GetView<LoginPageController> {
                       ),
                     ),
                     SizedBox(height: sizeHeight * 0.02),
-                    Container(
-                      alignment: Alignment.center,
-                      width: sizeWidth,
-                      height: sizeHeight * 0.068,
-                      decoration: BoxDecoration(
-                          color: primaryColor,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text(
-                        "Login",
-                        style: buttonLoginPage,
+                    InkWell(
+                      onTap: () => Get.offNamed(Routes.HOME_PAGE),
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: sizeWidth,
+                        height: sizeHeight * 0.068,
+                        decoration: BoxDecoration(
+                            color: primaryColor,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text(
+                          "Login",
+                          style: buttonLoginPage,
+                        ),
                       ),
                     ),
                     SizedBox(height: sizeHeight * 0.02),

@@ -1,4 +1,6 @@
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:inrest_app/app/pages/home_page/bindings/home_page_binding.dart';
+import 'package:inrest_app/app/pages/home_page/views/home_page_view.dart';
 import 'package:inrest_app/app/pages/landing_page/bindings/landing_page_binding.dart';
 import 'package:inrest_app/app/pages/landing_page/views/landing_page_view.dart';
 import 'package:inrest_app/app/pages/login_page/bindings/login_page_binding.dart';
@@ -14,7 +16,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN_PAGE;
+  static const INITIAL = Routes.SPLASH_SCREEN;
 
   static final routes = [
     GetPage(
@@ -41,6 +43,11 @@ class AppPages {
       name: _Paths.REGISTER_PAGE,
       page: () => RegisterPageView(),
       binding: RegisterPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME_PAGE,
+      page: () => HomePageView(),
+      binding: HomePageBinding(),
     ),
   ];
 }

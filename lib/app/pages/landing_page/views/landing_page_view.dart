@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inrest_app/app/pages/landing_page/controllers/landing_page_controller.dart';
+import 'package:inrest_app/app/routes/app_pages.dart';
 import 'package:inrest_app/themes/color_themes.dart';
 import 'package:inrest_app/themes/default_themes.dart';
 import 'package:inrest_app/themes/image_themes.dart';
@@ -63,34 +64,41 @@ class LandingPageView extends GetView<LandingPageController> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: sizeWidth * 0.1,
-                          vertical: sizeHeight * 0.02),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: primaryColor,
-                          width: 3,
+                    ElevatedButton(
+                        onPressed: () => Get.toNamed(Routes.REGISTER_PAGE),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: whiteColor,
+                            side: BorderSide(color: primaryColor, width: 3),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            )),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: sizeWidth * 0.1,
+                              vertical: sizeHeight * 0.024),
+                          child: Text(
+                            "Register",
+                            style: registerLandingPage,
+                          ),
+                        )),
+                    ElevatedButton(
+                      onPressed: () => Get.toNamed(Routes.LOGIN_PAGE),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
-                        borderRadius: BorderRadius.circular(50),
                       ),
-                      child: Text(
-                        "Register",
-                        style: registerLandingPage,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: sizeWidth * 0.1,
+                            vertical: sizeHeight * 0.024),
+                        child: Text(
+                          "Login",
+                          style: loginLandingPage,
+                        ),
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: sizeWidth * 0.1,
-                          vertical: sizeHeight * 0.024),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: primaryColor),
-                      child: Text(
-                        "Login",
-                        style: loginLandingPage,
-                      ),
-                    ),
+                    )
                   ])),
         ],
       )),
