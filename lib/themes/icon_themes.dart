@@ -1,0 +1,1 @@
+const String iconNext = 'assets/icons/next_icon.png';
