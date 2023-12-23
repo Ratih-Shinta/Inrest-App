@@ -14,7 +14,6 @@ class OnBoardingView extends GetView<OnBoardingController> {
   @override
   Widget build(BuildContext context) {
     OnBoardingContentList contentList = OnBoardingContentList();
-    // OnBoardingController controller = Get.put(OnBoardingController());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -44,48 +43,24 @@ class OnBoardingView extends GetView<OnBoardingController> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                right: sizeWidth * 0.025,
-                left: sizeWidth * 0.025,
-                bottom: sizeHeight * 0.04,
-              ),
-              child: Column(
-                children: [
-                  GestureDetector(
-                      onTap: () => controller.currentIndex.value ==
-                              contentList.list_on_board.length - 1
-                          ? Get.offAndToNamed(Routes.LANDING_PAGE)
-                          : controller.pageController.nextPage(
-                              duration: Duration(milliseconds: 300),
-                              curve: Curves.ease,
-                            ),
-                      child: Center(
-                        child: Image.asset(
-                          iconNext,
-                          height: 60,
-                          color: primaryColor,
-                        ),
-                      )),
-                  // Obx(
-                  //   () => GestureDetector(
-                  //       onTap: () => controller.currentIndex.value ==
-                  //               contentList.list_on_board.length - 1
-                  //           ? Get.offAndToNamed(Routes.LANDING_PAGE)
-                  //           : controller.pageController.nextPage(
-                  //               duration: Duration(milliseconds: 300),
-                  //               curve: Curves.ease,
-                  //             ),
-                  //       child: Center(
-                  //         child: Image.asset(
-                  //           iconNext,
-                  //           height: 60,
-                  //           color: const Color(0xFF00995E),
-                  //         ),
-                  //       )),
-                  // ),
-                ],
-              ),
+            Column(
+              children: [
+                GestureDetector(
+                    onTap: () => controller.currentIndex.value ==
+                            contentList.list_on_board.length - 1
+                        ? Get.offAndToNamed(Routes.LANDING_PAGE)
+                        : controller.pageController.nextPage(
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.ease,
+                          ),
+                    child: Center(
+                      child: Image.asset(
+                        iconNext,
+                        height: 60,
+                        color: primaryColor,
+                      ),
+                    )),
+              ],
             ),
           ],
         ),

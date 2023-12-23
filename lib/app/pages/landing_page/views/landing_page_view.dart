@@ -30,32 +30,34 @@ class LandingPageView extends GetView<LandingPageController> {
           child: Column(
         children: [
           Flexible(
-              child: Column(
-            children: [
-              Container(
-                width: sizeWidth,
-                child: Image.asset(
-                  vase,
-                  fit: BoxFit.fitWidth,
+              child: FittedBox(
+            child: Column(
+              children: [
+                Container(
+                  width: sizeWidth,
+                  child: Image.asset(
+                    vase,
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
-              ),
-              SizedBox(height: sizeHeight * 0.04),
-              Container(
-                width: sizeWidth * 0.79,
-                child: Text("Simpan, bagikan, wujudkan kreatifitas",
-                    textAlign: TextAlign.center, style: tittleOnBoarding),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: sizeHeight * 0.02),
-                child: SizedBox(
-                  width: sizeWidth * 0.68,
-                  child: Text(
-                      "Temukan, simpan, dan bagikan ide-ide kreatif Anda.",
-                      textAlign: TextAlign.center,
-                      style: descOnBorading),
+                SizedBox(height: sizeHeight * 0.04),
+                Container(
+                  width: sizeWidth * 0.79,
+                  child: Text("Simpan, bagikan, wujudkan kreatifitas",
+                      textAlign: TextAlign.center, style: tittleOnBoarding),
                 ),
-              ),
-            ],
+                Padding(
+                  padding: EdgeInsets.only(top: sizeHeight * 0.02),
+                  child: SizedBox(
+                    width: sizeWidth * 0.68,
+                    child: Text(
+                        "Temukan, simpan, dan bagikan ide-ide kreatif Anda.",
+                        textAlign: TextAlign.center,
+                        style: descOnBorading),
+                  ),
+                ),
+              ],
+            ),
           )),
           Padding(
               padding: EdgeInsets.only(
@@ -74,8 +76,8 @@ class LandingPageView extends GetView<LandingPageController> {
                             )),
                         child: Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: sizeWidth * 0.1,
-                              vertical: sizeHeight * 0.024),
+                              horizontal: sizeWidth * 0.05,
+                              vertical: sizeHeight * 0.02),
                           child: Text(
                             "Register",
                             style: registerLandingPage,
@@ -91,8 +93,8 @@ class LandingPageView extends GetView<LandingPageController> {
                       ),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: sizeWidth * 0.1,
-                            vertical: sizeHeight * 0.024),
+                            horizontal: sizeWidth * 0.05,
+                            vertical: sizeHeight * 0.02),
                         child: Text(
                           "Login",
                           style: loginLandingPage,

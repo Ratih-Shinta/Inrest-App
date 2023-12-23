@@ -10,18 +10,16 @@ class OrLoginPageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             height: 1.5,
             width: sizeWidth * 0.31,
             color: blackColor,
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: sizeWidth * 0.04),
-            child: Text(
-              "Or login with",
-              style: forgotLoginPage,
-            ),
+          Text(
+            "Or login with",
+            style: forgotLoginPage,
           ),
           Container(
             height: 1.5,

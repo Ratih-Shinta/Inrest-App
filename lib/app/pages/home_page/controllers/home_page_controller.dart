@@ -14,8 +14,11 @@ class HomePageController extends GetxController {
 
   void fetchProduct() async {
     try {
-      final response = await http.get(Uri.parse(
-          'https://api.pexels.com/v1/search?query=nature&per_page=100'));
+      final response = await http.get(
+  Uri.parse('https://api.pexels.com/v1/search?query=nature&per_page=100'),
+  headers: {'Authorization': 'BJl0ap1V86KsHfXbjGfPS9qRjGvuyahozrf277axY6w927Ym7ph94blu'},
+);
+
       if (response.statusCode == 200) {
         photosmodel.value =
             productPhotosModelFromJson(response.body);

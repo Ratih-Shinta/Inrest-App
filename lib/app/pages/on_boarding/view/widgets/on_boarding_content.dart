@@ -15,30 +15,32 @@ class OnBoardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: sizeWidth,
-          child: Image.asset(
-            image,
-            fit: BoxFit.fitWidth,
+    return FittedBox(
+      child: Column(
+        children: [
+          Container(
+            width: sizeWidth,
+            child: Image.asset(
+              image,
+              fit: BoxFit.fitWidth,
+            ),
           ),
-        ),
-        SizedBox(height: sizeHeight * 0.04),
-        Container(
-          width: sizeWidth * 0.79,
-          child:
-              Text(title, textAlign: TextAlign.center, style: tittleOnBoarding),
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: sizeHeight * 0.02),
-          child: SizedBox(
-            width: sizeWidth * 0.68,
-            child: Text(description,
-                textAlign: TextAlign.center, style: descOnBorading),
+          SizedBox(height: sizeHeight * 0.04),
+          Container(
+            width: sizeWidth * 0.79,
+            child:
+                Text(title, textAlign: TextAlign.center, style: tittleOnBoarding),
           ),
-        ),
-      ],
+          Padding(
+            padding: EdgeInsets.only(top: sizeHeight * 0.02),
+            child: SizedBox(
+              width: sizeWidth * 0.68,
+              child: Text(description,
+                  textAlign: TextAlign.center, style: descOnBorading),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
