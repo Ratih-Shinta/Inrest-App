@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inrest_app/app/pages/login_page/views/widgets/text_field_login_page_widgets.dart';
 import 'package:inrest_app/app/pages/register_page/controllers/register_page_controller.dart';
-import 'package:inrest_app/app/pages/register_page/views/widgets/or_register_page_widget.dart';
 import 'package:inrest_app/app/routes/app_pages.dart';
 import 'package:inrest_app/themes/color_themes.dart';
 import 'package:inrest_app/themes/default_themes.dart';
@@ -100,7 +99,12 @@ class RegisterPageView extends GetView<RegisterPageController> {
                       ),
                     ),
                     SizedBox(height: sizeHeight * 0.02),
-                    OrRegisterPageWidget(),
+                    Center(
+                      child: Text(
+                        "Or signup with",
+                        style: forgotLoginPage,
+                      ),
+                    ),
                     SizedBox(height: sizeHeight * 0.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

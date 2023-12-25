@@ -76,7 +76,7 @@ class LandingPageView extends GetView<LandingPageController> {
                             )),
                         child: Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: sizeWidth * 0.05,
+                              horizontal: sizeWidth * 0.02,
                               vertical: sizeHeight * 0.02),
                           child: Text(
                             "Register",
@@ -93,7 +93,7 @@ class LandingPageView extends GetView<LandingPageController> {
                       ),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
-                            horizontal: sizeWidth * 0.05,
+                            horizontal: sizeWidth * 0.02,
                             vertical: sizeHeight * 0.02),
                         child: Text(
                           "Login",
